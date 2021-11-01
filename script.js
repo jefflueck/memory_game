@@ -1,4 +1,6 @@
 const gameContainer = document.getElementById("game");
+let card1 = false;
+let card2 = false;
 
 const COLORS = [
   "red",
@@ -57,8 +59,17 @@ function createDivsForColors(colorArray) {
   }
 }
 
+
 // TODO: Implement this function!
 function handleCardClick(event) {
+  if((card1.event.target.className == card2.event.target.className) && active){
+    card1 == true && card2 == true;
+    event.target.className = active;
+  } else {
+    card1 && card2 == false;
+    event.target.className = false;
+  }
+
   // you can use event.target to see which element was clicked
   console.log("you just clicked", event.target);
 }
